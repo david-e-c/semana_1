@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+	
+	function sorteia(numero){
+		return Math.round(Math.random() * numero);
+}
+
+numeroPensado = sorteia(parseInt(prompt("Digite quantidade maxima de numeros")))		;
+console.log(numeroPensado);
+chute = parseInt(prompt("Digite um chute"));
+
+if(chute == numeroPensado) {
+    mostra("Você acertou!");
+
+} else {
+	if (chute > numeroPensado){
+	    mostra("Você errou, o número pensado é menor!");
+	} else{
+		mostra("Numero pensado é maior")}
+}
+
+</script>
